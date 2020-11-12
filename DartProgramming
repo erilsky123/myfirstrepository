@@ -1,0 +1,136 @@
+import 'dart:io';
+import 'dart:core';
+
+void main() {
+  var Leaded = 45.75;
+  var Unleaded = 43.18;
+  var Diesel = 37.12;
+  var Bio_Diesel = 48.03;
+
+  print(
+      'Welcome to Peter Gasoline station!\nLeaded\t\t45.75\nUnleaded\t43.18\nDiesel\t\t37.12\nBio_Diesel\t48.03');
+  print('Select your desired fuel in the by typing in the entry:');
+  var fueltype = stdin.readLineSync();
+  if (fueltype == 'Leaded') {
+    print('type "1" if by Cash or type "2" by Liter:');
+    var selection = stdin.readLineSync();
+    if (selection == '1') {
+      print('Cash is selected\nplease Input the amount of Cash:');
+      var payment = int.parse(stdin.readLineSync());
+      num leadedsum = 0;
+      leadedsum = payment / Leaded;
+      print('Numbers of Liters filled: ${leadedsum}');
+
+      print('Your cash:');
+      var Cash = int.parse(stdin.readLineSync());
+      num change = 0;
+      change = Cash - payment;
+      print('Your change: ${change}');
+    } else if (selection == '2') {
+      print('Liter is selected\nplease Input the amount of Liters:');
+      var liters = int.parse(stdin.readLineSync());
+      num pricecost = 0;
+      pricecost = liters * Leaded;
+      print('Your payment: ${pricecost} Php');
+
+      print('Your cash:');
+      var Cash = int.parse(stdin.readLineSync());
+      num change = 0;
+      change = Cash - pricecost;
+      print('Your change: ${change}');
+    } else {
+      main();
+    }
+  }
+  if (fueltype == 'Unleaded') {
+    print('type "1" if by Cash or type "2" by Liter:');
+    var selection = stdin.readLineSync();
+    if (selection == '1') {
+      print('Cash is selected\nplease Input the amount of Cash:');
+      var payment = int.parse(stdin.readLineSync());
+      num unleadedsum = 0;
+      unleadedsum = payment / Unleaded;
+      print('Numbers of Liters filled: ${unleadedsum}');
+
+      print('Your cash:');
+      var Cash = int.parse(stdin.readLineSync());
+      num change = 0;
+      change = Cash - payment;
+      print('Your change: ${change} Php');
+    } else if (selection == '2') {
+      print('Liter is selected\nplease Input the amount of Liters:');
+      var liters = int.parse(stdin.readLineSync());
+      num pricecost = 0;
+      pricecost = liters * Unleaded;
+      print('Your payment: ${pricecost} Php');
+
+      print('Your cash:');
+      var Cash = int.parse(stdin.readLineSync());
+      num change = 0;
+      change = Cash - pricecost;
+      print('Your change: ${change} Php');
+    } else {
+      main();
+    }
+  } else if (fueltype == 'Diesel') {
+    print('type "1" if by Cash or type "2" by Liter:');
+    var selection = stdin.readLineSync();
+    if (selection == '1') {
+      print('Cash is selected\nplease Input the amount of Cash:');
+      var payment = int.parse(stdin.readLineSync());
+      num dieselsum = 0;
+      dieselsum = payment / Diesel;
+      print('Numbers of Liters filled: ${dieselsum}');
+
+      print('Your cash:');
+      var Cash = int.parse(stdin.readLineSync());
+      num change = 0;
+      change = Cash - payment;
+      print('Your change: ${change} Php');
+    } else if (selection == '2') {
+      print('Liter is selected\nplease Input the amount of Liters:');
+      var liters = int.parse(stdin.readLineSync());
+      num pricecost = 0;
+      pricecost = liters * Diesel;
+      print('Your payment: ${pricecost} Php');
+
+      print('Your cash:');
+      var Cash = int.parse(stdin.readLineSync());
+      num change = 0;
+      change = Cash - pricecost;
+      print('Your change: ${change} Php');
+    } else {
+      main();
+    }
+  } else if (fueltype == 'Bio_Diesel') {
+    print('type "1" if by Cash or type "2" by Liter:');
+    var selection = stdin.readLineSync();
+    if (selection == '1') {
+      print('Cash is selected\nplease Input the amount of Cash:');
+      var payment = int.parse(stdin.readLineSync());
+      num bdieselsum = 0;
+      bdieselsum = payment / Bio_Diesel;
+      print('Numbers of Liters filled: ${bdieselsum}');
+
+      print('Your cash:');
+      var Cash = int.parse(stdin.readLineSync());
+      num change = 0;
+      change = Cash - payment;
+      print('Your change: ${change} Php');
+    } else if (selection == '2') {
+      print('Liter is selected\nplease Input the amount of Liters:');
+      var liters = int.parse(stdin.readLineSync());
+      num pricecost = 0;
+      pricecost = liters * Bio_Diesel;
+      print('Your payment: ${pricecost} Php');
+
+      print('Your cash:');
+      var Cash = int.parse(stdin.readLineSync());
+      num change = 0;
+      change = Cash - pricecost;
+      print('Your change: ${change} Php');
+    } else {
+      main();
+    }
+  }
+}
